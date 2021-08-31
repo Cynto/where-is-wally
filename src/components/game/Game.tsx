@@ -1,12 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import './game.css';
+import firebase from '../../Firebase';
+import 'firebase/firestore';
+import 'firebase/auth';
+import 'firebase/functions'
 
 function Game(props: any) {
   const [xCord, setxCord] = useState(0);
   const [yCord, setyCord] = useState(0);
 
   const handleChoice = (char: string) => {
-
+    const data = { char, xCord, yCord };
+    const checkCords = firebase.functions().httpsCallable('checkCords')
+    checkCords(data).then(result => {
+      console.log(result.data)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+    
   };
   const handleClick = (e: any) => {
     let img = e.target.getBoundingClientRect();
@@ -48,19 +60,19 @@ function Game(props: any) {
     <div className="game-page" id="game-page">
       <div className="char-container">
         <div className="char">
-          <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/waldo.jpg?alt=media&token=dcac5a4b-4465-4587-9897-0c042f59e7ba" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/waldo.jpg?alt=media&token=dcac5a4b-4465-4587-9897-0c042f59e7ba" alt="Book character Wally"/>
           <h4>Wally</h4>
         </div>
         <div className="char">
-          <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/odlaw.jpg?alt=media&token=4f89682f-0ea9-4918-83dd-03403b610ed3" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/odlaw.jpg?alt=media&token=4f89682f-0ea9-4918-83dd-03403b610ed3" alt="Book character Odlaw"/>
           <h4>Odlaw</h4>
         </div>
         <div className="char">
-          <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/wizard.jpeg?alt=media&token=1b5ce2d0-ab6f-4cdf-b76f-ffc56bc08f2d" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/wizard.jpeg?alt=media&token=1b5ce2d0-ab6f-4cdf-b76f-ffc56bc08f2d" alt="Book character Wizard"/>
           <h4>Wizard</h4>
         </div>
         <div className="char">
-          <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/wenda.jpeg?alt=media&token=daafaf96-7bb9-45b2-ba30-5b348b2e12cd" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/wenda.jpeg?alt=media&token=daafaf96-7bb9-45b2-ba30-5b348b2e12cd" alt="Book character Wenda"/>
           <h4>Wenda</h4>
         </div>
       </div>
@@ -72,20 +84,20 @@ function Game(props: any) {
         />
         <div className="circle" id="circle"></div>
         <div className="char-options" id="char-options">
-          <div className="icon-name">
-            <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/waldo.jpg?alt=media&token=dcac5a4b-4465-4587-9897-0c042f59e7ba" />
+          <div className="icon-name" onClick={() => handleChoice('wally')}>
+            <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/waldo.jpg?alt=media&token=dcac5a4b-4465-4587-9897-0c042f59e7ba" alt="Book character Wally"/>
             <p>Wally</p>
           </div>
-          <div className="icon-name">
-            <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/odlaw.jpg?alt=media&token=4f89682f-0ea9-4918-83dd-03403b610ed3" />
+          <div className="icon-name" onClick={() => handleChoice('odlaw')}>
+            <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/odlaw.jpg?alt=media&token=4f89682f-0ea9-4918-83dd-03403b610ed3" alt="Book character odlaw"/>
             <p>Odlaw</p>
           </div>
-          <div className="icon-name">
-            <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/wizard.jpeg?alt=media&token=1b5ce2d0-ab6f-4cdf-b76f-ffc56bc08f2d" />
+          <div className="icon-name" onClick={() => handleChoice('wizard')}>
+            <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/wizard.jpeg?alt=media&token=1b5ce2d0-ab6f-4cdf-b76f-ffc56bc08f2d" alt="Book character Wizard"/>
             <p>Wizard</p>
           </div>
-          <div className="icon-name">
-            <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/wenda.jpeg?alt=media&token=daafaf96-7bb9-45b2-ba30-5b348b2e12cd" />
+          <div className="icon-name" onClick={() => handleChoice('wenda')}>
+            <img src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/wenda.jpeg?alt=media&token=daafaf96-7bb9-45b2-ba30-5b348b2e12cd" alt="Book character Wenda"/>
             <p>Wenda</p>
           </div>
         </div>
