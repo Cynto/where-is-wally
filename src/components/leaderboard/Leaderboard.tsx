@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './leaderboard.css';
 import firebase from '../../Firebase';
 import 'firebase/firestore';
@@ -36,24 +37,29 @@ function Leaderboard() {
   useEffect(() => {}, [recordArray]);
 
   return (
-    <div className="leaderboard-container">
-      <div className="leaderboard">
-        <h2>Leaderboard</h2>
-        <div className="name-time spaced-content">
-          <p>NAME</p>
-          <p>TIME(Seconds)</p>
-        </div>
-        <div className="records-container">
-          {recordArray.map((record: any) => (
-            <div>
-              {record.username ? (
-                <div className="record spaced-content">
-                  <p>{record.username}</p>
-                  <p>{record.time}</p>{' '}
-                </div>
-              ) : null}
-            </div>
-          ))}
+    <div className="leaderboard-page">
+      <Link to="/game">
+        <button className="css-button-3d--sky">Play Again</button>
+      </Link>
+      <div className="leaderboard-container">
+        <div className="leaderboard">
+          <h2>Leaderboard</h2>
+          <div className="name-time spaced-content">
+            <p>NAME</p>
+            <p>TIME(Seconds)</p>
+          </div>
+          <div className="records-container">
+            {recordArray.map((record: any) => (
+              <div>
+                {record.username ? (
+                  <div className="record spaced-content">
+                    <p>{record.username}</p>
+                    <span>{record.time}</span>{' '}
+                  </div>
+                ) : null}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

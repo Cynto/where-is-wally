@@ -4,19 +4,23 @@ import Header from './components/header/Header';
 import Game from './components/game/Game';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import firebase from './Firebase';
+import Leaderboard from './components/leaderboard/Leaderboard';
 
 function App() {
-  const [username, setUsername] = useState('');
+  
   return (
     <div className="App">
       <Router>
         <Header />
         <Switch>
           <Route exact path="/">
-            <HomePage username={username} setUsername={setUsername}/>
+            <HomePage />
           </Route>
           <Route exact path="/game">
-            <Game username={username} setUsername={setUsername}/>
+            <Game />
+          </Route>
+          <Route path="/leaderboard">
+            <Leaderboard />
           </Route>
         </Switch>
       </Router>

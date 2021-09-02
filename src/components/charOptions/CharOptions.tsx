@@ -15,7 +15,7 @@ function CharOptions(props: any) {
 
     const charText: any = document.getElementById(`text-${char}`);
     charText.style.opacity = '30%';
-    setCharsFound(charsFound + 1)
+    setCharsFound((oldValue: number) => oldValue += 1)
   };
 
   const handleChoice = (char: string) => {
