@@ -1,5 +1,7 @@
 .game-page {
+  max-width: 100vw;
 }
+
 .char-container {
   display: flex;
   justify-content: center;

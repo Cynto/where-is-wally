@@ -1,0 +1,22 @@
+.leaderboard-container {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.leaderboard {
+  border: 1px solid grey;
+  width: 450px;
+  text-align: center;
+  border-radius: 10px;
+}
+.spaced-content {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid grey;
+}
+.name-time p {
+  color: grey;
+  
+}
