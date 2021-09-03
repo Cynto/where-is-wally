@@ -2,10 +2,10 @@ import React from 'react';
 import firebase from '../../Firebase';
 import 'firebase/firestore';
 import 'firebase/auth';
-import 'firebase/functions'
+import 'firebase/functions';
 
 function CharOptions(props: any) {
-  const { xCord, yCord, charsFound, setCharsFound } = props;
+  const { xCord, yCord, setCharsFound } = props;
   const handleCorrectChoice = (char: string) => {
     const charDiv: any = document.getElementById(`choice-${char}`);
     charDiv.style.display = 'none';
@@ -15,7 +15,7 @@ function CharOptions(props: any) {
 
     const charText: any = document.getElementById(`text-${char}`);
     charText.style.opacity = '30%';
-    setCharsFound((oldValue: number) => oldValue += 1)
+    setCharsFound((oldValue: number) => (oldValue += 1));
   };
 
   const handleChoice = (char: string) => {
@@ -24,7 +24,6 @@ function CharOptions(props: any) {
     checkCords(data)
       .then((result) => {
         if (result.data === true) {
-          console.log(result.data);
           handleCorrectChoice(char);
         }
       })

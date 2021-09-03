@@ -26,10 +26,7 @@ function StopWatch(props: any) {
     setIsActive(true);
     setIsPaused(false);
   };
-  const handleReset = () => {
-    setIsActive(false);
-    setTime(0);
-  };
+  
 
   useEffect(() => {
     handleStart();

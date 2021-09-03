@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './game.css';
-import firebase from '../../Firebase';
-import 'firebase/firestore';
-import 'firebase/auth';
-import 'firebase/functions';
 import CharOptions from '../charOptions/CharOptions';
 import StopWatch from '../stopWatch/StopWatch';
-import Leaderboard from '../leaderboard/Leaderboard';
 import SetUsername from '../setUsername/SetUsername';
 
 function Game(props: any) {
@@ -19,8 +14,6 @@ function Game(props: any) {
   const [time, setTime] = useState(0);
   const [timeEdit, setTimeEdit] = useState('');
 
-  const db = firebase.firestore();
-  const leaderboardRef = db.collection('leaderboard');
 
   const handleClick = (e: any) => {
     if (!gameComplete) {
@@ -56,7 +49,7 @@ function Game(props: any) {
       timeArray.shift();
       timeArray.splice(-1, 1);
       const timeDot = timeArray.join('');
-      console.log(timeDot);
+
       setGameComplete(true);
       setTimeEdit(timeDot);
     }

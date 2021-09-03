@@ -1,15 +1,14 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from '../../Firebase';
 import 'firebase/firestore';
 import 'firebase/auth';
-import './setUsername.css'
+import './setUsername.css';
 
 function SetUsername(props: any) {
   const { username, setUsername, timeEdit } = props;
   const nameRef = useRef(document.createElement('input'));
 
-  const auth = firebase.auth();
   const db = firebase.firestore();
 
   const usersRef = db.collection('users');
@@ -50,7 +49,9 @@ function SetUsername(props: any) {
           </div>
           <br />
 
-          <button className="css-button-3d--sky" type="submit">Confirm Username</button>
+          <button className="css-button-3d--sky" type="submit">
+            Confirm Username
+          </button>
         </form>
       ) : (
         <div className="enter-div">

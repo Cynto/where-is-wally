@@ -1,13 +1,10 @@
-import { useState } from 'react';
 import HomePage from './components/homepage/HomePage';
 import Header from './components/header/Header';
 import Game from './components/game/Game';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import firebase from './Firebase';
 import Leaderboard from './components/leaderboard/Leaderboard';
 
 function App() {
-  
   return (
     <div className="App">
       <Router>

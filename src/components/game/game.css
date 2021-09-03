@@ -68,3 +68,13 @@
   display: flex;
   justify-content: center;
 }
+
+@media only screen and (max-width: 600px) {
+ .game-page {
+   max-width: 100vw;
+ }
+ .img-container {
+   width: 1200px;
+   justify-content: flex-start;
+ }
+}

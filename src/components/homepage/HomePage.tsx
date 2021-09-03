@@ -1,7 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ui } from '../../Firebase';
-import firebase from '../../Firebase';
 import 'firebase/firestore';
 import 'firebase/auth';
 import './homepage.css';

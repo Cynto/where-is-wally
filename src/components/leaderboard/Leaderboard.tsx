@@ -5,6 +5,7 @@ import firebase from '../../Firebase';
 import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/functions';
+import uniqid from 'uniqid'
 
 function Leaderboard() {
   const [recordArray, setRecordArray] = useState([]);
@@ -50,7 +51,7 @@ function Leaderboard() {
           </div>
           <div className="records-container">
             {recordArray.map((record: any) => (
-              <div>
+              <div key={uniqid()}>
                 {record.username ? (
                   <div className="record spaced-content">
                     <p>{record.username}</p>
