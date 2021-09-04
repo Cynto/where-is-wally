@@ -3,6 +3,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import './homepage.css';
 
+
 function HomePage(props: any) {
   return (
     <div className="homepage">

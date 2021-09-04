@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Leaderboard tests Matches snapshot 1`] = `
+<div
+  className="leaderboard-page"
+>
+  <a
+    href="/game"
+    onClick={[Function]}
+  >
+    <button
+      className="css-button-3d--sky"
+    >
+      Play Again
+    </button>
+  </a>
+  <div
+    className="leaderboard-container"
+  >
+    <div
+      className="leaderboard"
+    >
+      <h2>
+        Leaderboard
+      </h2>
+      <div
+        className="name-time spaced-content"
+      >
+        <p>
+          NAME
+        </p>
+        <p>
+          TIME(Seconds)
+        </p>
+      </div>
+      <div
+        className="records-container"
+      />
+    </div>
+  </div>
+</div>
+`;

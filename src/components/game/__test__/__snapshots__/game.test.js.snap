@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game page tests Matches snapshot 1`] = `
+<div
+  className="game-page"
+  id="game-page"
+>
+  <div>
+    <div
+      className="stop-watch"
+    >
+      <div
+        className="timer"
+      >
+        <span
+          className="digits"
+        >
+          00
+          :
+        </span>
+        <span
+          className="digits"
+        >
+          00
+          .
+        </span>
+        <span
+          className="digits mili-sec"
+        >
+          00
+        </span>
+      </div>
+    </div>
+    <div
+      className="char-container"
+    >
+      <div
+        className="char"
+      >
+        <img
+          alt="Book character Wally"
+          id="img-wally"
+          src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/waldo.jpg?alt=media&token=dcac5a4b-4465-4587-9897-0c042f59e7ba"
+        />
+        <h4
+          id="text-wally"
+        >
+          Wally
+        </h4>
+      </div>
+      <div
+        className="char"
+      >
+        <img
+          alt="Book character Odlaw"
+          id="img-odlaw"
+          src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/odlaw.jpg?alt=media&token=4f89682f-0ea9-4918-83dd-03403b610ed3"
+        />
+        <h4
+          id="text-odlaw"
+        >
+          Odlaw
+        </h4>
+      </div>
+      <div
+        className="char"
+      >
+        <img
+          alt="Book character Wizard"
+          id="img-wizard"
+          src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/wizard.jpeg?alt=media&token=1b5ce2d0-ab6f-4cdf-b76f-ffc56bc08f2d"
+        />
+        <h4
+          id="text-wizard"
+        >
+          Wizard
+        </h4>
+      </div>
+      <div
+        className="char"
+      >
+        <img
+          alt="Book character Wenda"
+          id="img-wenda"
+          src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/wenda.jpeg?alt=media&token=daafaf96-7bb9-45b2-ba30-5b348b2e12cd"
+        />
+        <h4
+          id="text-wenda"
+        >
+          Wenda
+        </h4>
+      </div>
+    </div>
+    <div
+      className="img-container"
+    >
+       
+      <img
+        alt="Where's wally"
+        onClick={[Function]}
+        src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/level-1.png?alt=media&token=44c0daf6-641e-4377-8393-2de606838a3f"
+      />
+      <div
+        className="circle"
+        id="circle"
+      />
+      <div
+        className="char-options"
+        id="char-options"
+      >
+        <div
+          className="icon-name"
+          id="choice-wally"
+          onClick={[Function]}
+        >
+          <img
+            alt="Book character Wally"
+            src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/waldo.jpg?alt=media&token=dcac5a4b-4465-4587-9897-0c042f59e7ba"
+          />
+          <p>
+            Wally
+          </p>
+        </div>
+        <div
+          className="icon-name"
+          id="choice-odlaw"
+          onClick={[Function]}
+        >
+          <img
+            alt="Book character odlaw"
+            src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/odlaw.jpg?alt=media&token=4f89682f-0ea9-4918-83dd-03403b610ed3"
+          />
+          <p>
+            Odlaw
+          </p>
+        </div>
+        <div
+          className="icon-name"
+          id="choice-wizard"
+          onClick={[Function]}
+        >
+          <img
+            alt="Book character Wizard"
+            src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/wizard.jpeg?alt=media&token=1b5ce2d0-ab6f-4cdf-b76f-ffc56bc08f2d"
+          />
+          <p>
+            Wizard
+          </p>
+        </div>
+        <div
+          className="icon-name"
+          id="choice-wenda"
+          onClick={[Function]}
+        >
+          <img
+            alt="Book character Wenda"
+            src="https://firebasestorage.googleapis.com/v0/b/where-is-wally-30eb4.appspot.com/o/wenda.jpeg?alt=media&token=daafaf96-7bb9-45b2-ba30-5b348b2e12cd"
+          />
+          <p>
+            Wenda
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

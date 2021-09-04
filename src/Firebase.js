@@ -1,5 +1,5 @@
 import firebase from 'firebase/app';
-var firebaseui = require('firebaseui');
+
 // Initialize Firebase
 firebase.initializeApp({
   apiKey: 'AIzaSyDUOeiZGxtcpgT65vUYfYHxS1rJxQl2_44',
@@ -10,6 +10,5 @@ firebase.initializeApp({
   appId: '1:1030507379980:web:a826cec6d18ece2bfc1d29',
 });
 // Initialize the FirebaseUI Widget using Firebase.
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
-export { ui };
+
 export default firebase;

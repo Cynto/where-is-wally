@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Homepage tests Matches snapshot 1`] = `
+<div
+  className="homepage"
+>
+  <div
+    className="button-container"
+  >
+    <a
+      href="/game"
+      onClick={[Function]}
+    >
+      <button
+        className="css-button-3d--sky"
+      >
+        Play Game
+      </button>
+    </a>
+    <a
+      href="/leaderboard"
+      onClick={[Function]}
+    >
+      <button
+        className="css-button-3d--red"
+      >
+        Leaderboard
+      </button>
+    </a>
+  </div>
+</div>
+`;
